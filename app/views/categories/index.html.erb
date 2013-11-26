@@ -1,0 +1,27 @@
+<h1 style="border-bottom: 1px solid #FFF"> Categories </h1>
+<ul class="category-list">
+	<!-- this loops through the @categories. No equals sign to avoid printing out the list -->
+
+
+	<% @categories.each do |category| %>
+
+	<li>
+		<div class="details">
+			<!-- calls every item in @categories, a category and prints it out the category name linking to the  -->
+			<%= link_to category.name, category_path(category) %>
+		</div>
+
+		<div class="actions">
+			<%= link_to "Edit", edit_category_path(category), class: "edit" %>
+			<%= link_to "delete", category_path(category), method: :delete, class:"delete", confirm: "Are you sure?" %>
+		</div>
+
+
+	</li>
+	<% end %>
+
+</ul>
+
+<!-- use link to as it is more flexible for internationalisation / global changes -->
+
+<%= link_to "New Category", new_category_path, class: "button" %>
