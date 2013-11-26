@@ -9,7 +9,8 @@ class LinksController < ApplicationController
   	#Make a clone if duplicate_id in url
 
   	if params[:duplicate_id].present?
-  		@link = @category.links.find(params[:duplicate_id])
+  		@duplicate_link = @category.links.find(params[:duplicate_id])
+  		@link = @category.links.new(@duplicate_link.attributes)
 
   	else
   		@link = @category.links.new
@@ -17,8 +18,9 @@ class LinksController < ApplicationController
 
   end
 
+  # Create the link based on form data
   def create
-  	link = @category.links.new(link_params)
+  	@link = @category.links.new()
 
   	if @link.save
   		flash[:success] = "Your link has been added"
