@@ -11,7 +11,7 @@ body {
   background: $bg;
   color: $textColor;  
   
-  font-family: "open sans", Times New Roman;
+  font-family: "open sans", "Times New Roman";
   font-style: italic;
   font-weight: 700;
   font-size: 16px;
@@ -93,7 +93,9 @@ h1 {
 }
 
 h2 {
-  font-size: 21px;
+  font-size: 28px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   transition: opacity 0.25s;
 }
 
@@ -151,7 +153,7 @@ input[type="submit"],
 textarea {
   -webkit-appearance: none;
   background: none;
-  border: 2px solid $textColor;
+  border: 2px solid #f0c478;
   padding: 5px 7px;
   font-size: 24px;
   font-weight: 400;
@@ -163,7 +165,7 @@ textarea {
   transition: border 1s;
 
   &:focus {
-    border-color: $primaryColour;
+    border-color: #1CBDA4;
   }
 }
 
@@ -181,8 +183,13 @@ input[type="submit"], a.button {
 
   &:hover {
     background-color: #1CBDA4;
-    color:#FFFFFF;
+    color:#000;
     border-color: #FFFFFF;
+  }
+  &:active {
+    background-color: #1CBDA4;
+    color:#000;
+    border-color: #000;
   }
 }
 
@@ -200,7 +207,7 @@ a.button-back {
 
   &:hover {
     background-color: #BD1C35;
-    color:#FFFFFF;
+    color:#000;
     border-color: #FFFFFF;
   }
 }
@@ -231,7 +238,8 @@ div.actions {
   margin-top: 8px;
 
   a {
-    display: block;
+    display: inline;
+    margin-right: 10px;
   }
 }
 

@@ -20,7 +20,7 @@ class LinksController < ApplicationController
 
   # Create the link based on form data
   def create
-  	@link = @category.links.new()
+  	@link = @category.links.new(link_params)
 
   	if @link.save
   		flash[:success] = "Your link has been added"

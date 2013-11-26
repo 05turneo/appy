@@ -15,7 +15,7 @@
 				<%= link_to "Edit", edit_category_link_path(@category, l), class: "edit" %>
 
 				<%= link_to "Duplicate",
-					new_category_link_path(@category, duplicate_id: l.id) %>
+					new_category_link_path(@category, duplicate_id: l.id), class: "edit" %>
 
 				<%= link_to "delete", category_link_path(@category, l),
 				 method: :delete, class: "delete", confirm: "Are you sure?" %>
