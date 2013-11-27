@@ -88,8 +88,10 @@ a {
 
 h1 {
   margin-bottom: 40px;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 400;
+  padding-bottom: 20px;
+  border-bottom:1px solid white;
 }
 
 h2 {
@@ -280,4 +282,8 @@ span {
 
 span.error {
   display:block;
+}
+
+p.linkys a {
+  color: #86BCE3;
 }

@@ -35,6 +35,7 @@ class LinksController < ApplicationController
   def edit
   end
 
+  # actually update the database with the edited information
   def update
 
   	if @link.update(link_params)
@@ -56,7 +57,7 @@ class LinksController < ApplicationController
 
 
   def link_params
-  	params.require(:link).permit(:name, :description, :url)
+  	params.require(:link).permit(:name, :description, :url, :is_recommended)
   end
 
   # we need to find the category for the link using the /categories/:category_id/links/new
