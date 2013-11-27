@@ -152,28 +152,29 @@ input[type="password"],
 input[type="submit"],
 textarea {
   background: none;
-  border-radius: 7px;
+  border-radius: 3px;
   padding: 10px 15px;
   font-size: 24px;
   font-weight: 400;
   color: $secondaryColour;
   outline: none;
-  background: #666;
+  background: #C7C7C7;
   -webkit-appearance: none;
   border: none;
+  border: 1px solid #9A9B9C;
 
   width: 400px;
 
   transition: border 1s;
 
   &:focus {
-    border-color: #1CBDA4;
+    border-color: #00A13E;
   }
 }
 
 
 textarea {
-  resize: vertical;
+  resize: vertical, horizontal;
   height: 300px;
 }
 
@@ -181,7 +182,7 @@ input[type="submit"], a.button {
   width: auto;
   padding: 14px 15px;
   font-size: 18px;
-  color: #666;
+  color: #B3B3B3;
   background-color: #fff;
   border-radius: 7px;
   cursor: pointer;
